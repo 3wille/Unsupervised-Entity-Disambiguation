@@ -1,0 +1,46 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu/torch_stable.html"
+verify_ssl = true
+
+[packages]
+elasticsearch = ">=6.0.0,<7.0.0"
+requests = {extras = ["socks"], version = "*"}
+nltk = "*"
+numpy = "*"
+pandas = "==1.2.4"
+tqdm = "*"
+#torch = { file = "https://download.pytorch.org/whl/cpu/torch-1.9.0%2Bcpu-cp39-cp39-linux_x86_64.whl" }
+torch = { index = "pytorch-cpu", version = "*" }
+transformers = "*"
+networkx = "*"
+chinese-whispers = {editable = true, git = "https://github.com/nlpub/chinese-whispers-python.git"}
+matplotlib = "*"
+tikzplotlib = "*"
+qwikidata = "*"
+wikipedia = "*"
+termcolor = "*"
+ipython = "*"
+ipykernel = "*"
+nbdime = "*"
+sentence-transformers = "*"
+pyvis = "*"
+rouge-metric = "*"
+requests-cache = "*"
+gensim = "*"
+spacy = "*"
+en-core-web-trf = {file = "https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.2.0/en_core_web_trf-3.2.0-py3-none-any.whl"}
+tabulate = "*"
+network2tikz = "*"
+
+[dev-packages]
+jupyter-spaces= "*"
+pylama = "*"
+
+[requires]
+python_version = "3.9"
