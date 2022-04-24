@@ -4,8 +4,8 @@ This repository contains the code for the equally named master thesis at [UHH's 
 
 ## Requirements
 All code in this repository is written in Python (python 3.9.6 to be precise).
-Python dependencies are managed with Pipenv which needs to be installed.
-To install dependencies run:
+Python dependencies are managed with Pipenv, which needs to be installed.
+Then, to install dependencies run:
 ```shell
 pipenv install
 ```
@@ -20,5 +20,8 @@ Place the full AIDA TSV in ``aida/aida-yago2-dataset/AIDA-YAGO2-dataset.tsv``, t
 
 ### Wikipedia
 The dump, that we use, consists of one JSON object per line.
+Each line is a JSON object with the keys ``id``, ``title`` and ``text`` corresponding to one Wikipedia page.
 
-##
+## Run
+The Makefile holds all commands used to build the models and run the experiments.
+Our pipeline consists of multiple Python files that all load and save pickles.
